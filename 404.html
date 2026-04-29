@@ -30,10 +30,10 @@
       "description": "Experience comfortable, state-of-the-art dentistry at Smile Theory. Expert dental care designed to keep you smiling with confidence.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Designer Row, Suite 101, Bandra West",
-        "addressLocality": "Mumbai",
+        "streetAddress": "A9 Vraj landmark, Makhmalabaad road, RTO office link road, behind Sharadchandra Pawar Market",
+        "addressLocality": "Nashik",
         "addressRegion": "MH",
-        "postalCode": "400050",
+        "postalCode": "422003",
         "addressCountry": "IN"
       },
       "openingHoursSpecification": [
@@ -50,7 +50,7 @@
           "closes": "21:00"
         }
       ],
-      "telephone": "+919876543210"
+      "telephone": "+919272505632"
     }
     </script>
 
@@ -114,6 +114,20 @@
             background-color: #004d45;
             box-shadow: 0 0 15px rgba(0, 96, 86, 0.3);
             z-index: 10;
+        }
+
+        /* Footer: 4-col proportional grid from md (768px) */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                gap: 3rem;
+            }
         }
     </style>
 </head>
@@ -254,25 +268,24 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="w-full bg-primary text-white pt-24 pb-12 px-6">
+    <footer id="footer" class="w-full bg-primary text-white pt-10 md:pt-14 pb-6 md:pb-8 px-6 md:px-12 lg:px-24">
         <div class="max-w-7xl mx-auto">
 
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-16 mb-8 md:mb-24">
+            <div class="footer-grid grid grid-cols-1 gap-0 mb-4 md:mb-8">
 
-                <div class="md:col-span-5">
-                    <a href="index.html" class="inline-block mb-8">
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
                         <img src="logo.png" alt="Smile Theory Logo" width="947" height="233" loading="lazy"
                             class="h-10 w-auto brightness-0 invert">
                     </a>
-                    <p class="text-white/70 font-sans leading-relaxed max-w-sm text-lg">
-                        A boutique dental studio dedicated to the art of precision care and the comfort of our
-                        community.
+                    <p class="text-white/70 font-sans leading-relaxed max-w-sm text-base">
+                        A considered approach to dentistry — combining precision, calm, and personalised care.
                     </p>
                 </div>
 
-                <div class="md:col-start-7 md:col-span-2 border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-4 md:py-0 md:mb-8 text-left outline-none"
-                        onclick="toggleFooter('nav-list', this)">
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="nav-list" onclick="toggleFooter('nav-list', this)">
                         <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">
                             Navigation</h5>
                         <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
@@ -280,21 +293,25 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul id="nav-list" class="hidden md:block space-y-4 font-sans text-sm pb-6 md:pb-0">
-                        <li><a href="index.html#about" class="text-white/70 hover:text-white transition-colors">The
-                                Practitioner</a></li>
-                        <li><a href="index.html#services" class="text-white/70 hover:text-white transition-colors">Our
+                    <ul id="nav-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
+                        <li><a href="index.html#about"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">About</a>
+                        </li>
+                        <li><a href="index.html#services"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">
                                 Services</a></li>
-                        <li><a href="index.html#gallery" class="text-white/70 hover:text-white transition-colors">Smile
+                        <li><a href="index.html#gallery"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">Smile
                                 Gallery</a></li>
                         <li><a href="index.html#faq"
-                                class="text-white/70 hover:text-white transition-colors">Inquiries</a></li>
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">FAQ</a>
+                        </li>
                     </ul>
                 </div>
 
-                <div class="md:col-span-2 border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-4 md:py-0 md:mb-8 text-left outline-none"
-                        onclick="toggleFooter('follow-list', this)">
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="follow-list" onclick="toggleFooter('follow-list', this)">
                         <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Follow
                         </h5>
                         <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
@@ -302,16 +319,15 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul id="follow-list" class="hidden md:block space-y-4 font-sans text-sm pb-6 md:pb-0">
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Instagram</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Google Maps</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">LinkedIn</a></li>
+                    <ul id="follow-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
+                        <li><a href="https://instagram.com/your-clinic-page" target="_blank" rel="noopener noreferrer"
+                                class="text-white/70 hover:text-white transition-colors">Instagram</a></li>
                     </ul>
                 </div>
 
-                <div class="md:col-span-2 border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-4 md:py-0 md:mb-8 text-left outline-none"
-                        onclick="toggleFooter('studio-list', this)">
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="studio-list" onclick="toggleFooter('studio-list', this)">
                         <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Studio
                         </h5>
                         <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
@@ -320,28 +336,26 @@
                         </svg>
                     </button>
                     <div id="studio-list" class="hidden md:block pb-6 md:pb-0">
-                        <p class="text-sm text-white/70 leading-relaxed font-sans">
-                            Bandra West, Mumbai<br>
-                            Maharashtra 400050
+                        <p class="text-sm text-white/70 leading-relaxed font-sans whitespace-nowrap">
+                            A9 Vraj landmark, Makhmalabaad road, <br>RTO office link road, <br>behind Sharadchandra
+                            Pawar Market,
+                            Nashik <br>Maharashtra 422003
+
                         </p>
                     </div>
                 </div>
             </div>
 
             <div
-                class="pt-8 md:pt-12 border-none md:border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                class="pt-4 md:pt-6 border-none md:border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
 
                 <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 w-full">
                     <div class="text-[11px] md:text-xs font-sans text-white/50">
-                        Copyright © 2026 SmileTheory Dental Studio. All rights reserved.
+                        Copyright © 2026 Smile Theory. All rights reserved.
                     </div>
 
                     <div class="flex flex-wrap items-center gap-x-2 text-[11px] md:text-xs font-sans text-white/70">
                         <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                        <span class="text-white/30">|</span>
-                        <a href="#" class="hover:text-white transition-colors">Terms of Care</a>
-                        <span class="text-white/30">|</span>
-                        <a href="#" class="hover:text-white transition-colors">Legal</a>
                     </div>
                 </div>
 
@@ -392,12 +406,15 @@
             if (window.innerWidth >= 768) return; // Only run on mobile
             const section = document.getElementById(sectionId);
             const icon = btn.querySelector('svg');
-            if (section.classList.contains('hidden')) {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            if (!isExpanded) {
                 section.classList.remove('hidden');
                 icon.classList.add('rotate-180');
+                btn.setAttribute('aria-expanded', 'true');
             } else {
                 section.classList.add('hidden');
                 icon.classList.remove('rotate-180');
+                btn.setAttribute('aria-expanded', 'false');
             }
         }
 
