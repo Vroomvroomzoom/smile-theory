@@ -91,16 +91,10 @@
             }
         }
 
-        /* Footer: 4-col proportional grid from md (768px) */
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 2fr 1fr 1fr 1fr;
-                gap: 2rem;
-            }
-        }
-
+        /* Footer: 4-col proportional grid from lg (1024px) */
         @media (min-width: 1024px) {
             .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
                 gap: 3rem;
             }
         }
@@ -1120,13 +1114,13 @@
     </main>
 
     <!-- Footer Section -->
-    <footer id="footer" class="w-full bg-primary text-white pt-10 md:pt-14 pb-6 md:pb-8 px-6 md:px-12 lg:px-24">
+    <footer id="footer" class="w-full bg-primary text-white pt-10 lg:pt-14 pb-6 lg:pb-8 px-6 md:px-12 lg:px-24">
         <div class="max-w-7xl mx-auto">
 
-            <div class="footer-grid grid grid-cols-1 gap-0 mb-4 md:mb-8">
+            <div class="footer-grid grid grid-cols-1 gap-0 mb-4 lg:mb-8">
 
                 <div>
-                    <a href="#" class="inline-block mb-4">
+                    <a href="index.html" class="inline-block mb-4">
                         <img src="logo.png" alt="Smile Theory Logo" width="947" height="233" loading="lazy"
                             class="h-10 w-auto brightness-0 invert">
                     </a>
@@ -1135,17 +1129,17 @@
                     </p>
                 </div>
 
-                <div class="border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                <div class="border-b border-white/10 lg:border-none">
+                    <button class="w-full flex justify-between items-center py-3 lg:py-0 lg:mb-5 text-left outline-none"
                         aria-expanded="false" aria-controls="nav-list" onclick="toggleFooter('nav-list', this)">
-                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">
+                        <h5 class="text-xs font-sans text-white/90 lg:text-white/50 uppercase tracking-widest">
                             Navigation</h5>
-                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                        <svg class="h-4 w-4 text-white/50 lg:hidden transition-transform duration-300" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul id="nav-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
+                    <ul id="nav-list" class="hidden lg:block space-y-3 font-sans text-sm pb-6 lg:pb-0">
                         <li><a href="#about"
                                 class="text-white/70 hover:text-white transition-colors whitespace-nowrap">About</a>
                         </li>
@@ -1161,32 +1155,33 @@
                     </ul>
                 </div>
 
-                <div class="border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                <div class="border-b border-white/10 lg:border-none">
+                    <button class="w-full flex justify-between items-center py-3 lg:py-0 lg:mb-5 text-left outline-none"
                         aria-expanded="false" aria-controls="follow-list" onclick="toggleFooter('follow-list', this)">
-                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Follow
+                        <h5 class="text-xs font-sans text-white/90 lg:text-white/50 uppercase tracking-widest">Follow
                         </h5>
-                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                        <svg class="h-4 w-4 text-white/50 lg:hidden transition-transform duration-300" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul id="follow-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Instagram</a></li>
+                    <ul id="follow-list" class="hidden lg:block space-y-3 font-sans text-sm pb-6 lg:pb-0">
+                        <li><a href="https://instagram.com/your-clinic-page" target="_blank" rel="noopener noreferrer"
+                                class="text-white/70 hover:text-white transition-colors">Instagram</a></li>
                     </ul>
                 </div>
 
-                <div class="border-b border-white/10 md:border-none">
-                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                <div class="border-b border-white/10 lg:border-none">
+                    <button class="w-full flex justify-between items-center py-3 lg:py-0 lg:mb-5 text-left outline-none"
                         aria-expanded="false" aria-controls="studio-list" onclick="toggleFooter('studio-list', this)">
-                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Studio
+                        <h5 class="text-xs font-sans text-white/90 lg:text-white/50 uppercase tracking-widest">Clinic
                         </h5>
-                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                        <svg class="h-4 w-4 text-white/50 lg:hidden transition-transform duration-300" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <div id="studio-list" class="hidden md:block pb-6 md:pb-0">
+                    <div id="studio-list" class="hidden lg:block pb-6 lg:pb-0">
                         <p class="text-sm text-white/70 leading-relaxed font-sans whitespace-nowrap">
                             A9 Vraj landmark, Makhmalabaad road, <br>RTO office link road, <br>behind Sharadchandra
                             Pawar Market,
@@ -1198,20 +1193,20 @@
             </div>
 
             <div
-                class="pt-4 md:pt-6 border-none md:border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                class="pt-4 lg:pt-6 border-none lg:border-t border-white/10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
 
-                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 w-full">
-                    <div class="text-[11px] md:text-xs font-sans text-white/50">
+                <div class="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-8 w-full">
+                    <div class="text-[11px] lg:text-xs font-sans text-white/50">
                         Copyright © 2026 Smile Theory. All rights reserved.
                     </div>
 
-                    <div class="flex flex-wrap items-center gap-x-2 text-[11px] md:text-xs font-sans text-white/70">
+                    <div class="flex flex-wrap items-center gap-x-2 text-[11px] lg:text-xs font-sans text-white/70">
                         <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
                     </div>
                 </div>
 
                 <a href="#"
-                    class="hidden md:flex h-10 w-10 shrink-0 rounded-full border border-white/20 items-center justify-center hover:bg-white hover:text-primary transition-all group">
+                    class="hidden lg:flex h-10 w-10 shrink-0 rounded-full border border-white/20 items-center justify-center hover:bg-white hover:text-primary transition-all group">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="h-4 w-4 text-white/70 group-hover:text-primary transition-transform group-hover:-translate-y-0.5"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1253,19 +1248,14 @@
     <script>
         // Footer Accordion Logic
         function toggleFooter(sectionId, btn) {
-            if (window.innerWidth >= 768) return; // Only run on mobile
+            if (window.matchMedia('(min-width: 1024px)').matches) return;
             const section = document.getElementById(sectionId);
             const icon = btn.querySelector('svg');
             const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-            if (!isExpanded) {
-                section.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-                btn.setAttribute('aria-expanded', 'true');
-            } else {
-                section.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-                btn.setAttribute('aria-expanded', 'false');
-            }
+
+            btn.setAttribute('aria-expanded', !isExpanded);
+            section.classList.toggle('hidden');
+            if (icon) icon.classList.toggle('rotate-180');
         }
 
         const openBtn = document.getElementById('mobile-menu-btn');
