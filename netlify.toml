@@ -1,0 +1,55 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Netlify configuration for Smile Theory (static site — no build step)
+# ──────────────────────────────────────────────────────────────────────────────
+
+[build]
+  # No build command — styles.css is pre-compiled locally
+  publish = "."
+
+# ─── Custom 404 page ───────────────────────────────────────────────────────────
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# ─── Security & performance headers ───────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking
+    X-Frame-Options = "DENY"
+    # Prevent MIME-type sniffing
+    X-Content-Type-Options = "nosniff"
+    # Enforce HTTPS
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Disable Referer leaking (matches the meta tag already in HTML)
+    Referrer-Policy = "no-referrer"
+    # Minimal permissions policy
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# ─── Cache fonts aggressively (immutable content-addressed filenames) ──────────
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# ─── Cache CSS & images for 1 week ────────────────────────────────────────────
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

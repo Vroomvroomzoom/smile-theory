@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description"
+        content="Experience comfortable, state-of-the-art dentistry at Smile Theory in Nashik. Expert dental care designed to keep you smiling with confidence.">
+    <title>Smile Theory | Dental Clinic in Nashik</title>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Smile Theory | Dental Clinic in Nashik">
+    <meta property="og:description"
+        content="Experience comfortable, state-of-the-art dentistry at Smile Theory in Nashik. Expert dental care designed to keep you smiling with confidence.">
+    <meta property="og:image" content="clinic-photo.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Smile Theory",
+      "image": "logo.png",
+      "description": "Experience comfortable, state-of-the-art dentistry at Smile Theory. Expert dental care designed to keep you smiling with confidence.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A9 Vraj landmark, Makhmalabaad road, RTO office link road, behind Sharadchandra Pawar Market",
+        "addressLocality": "Nashik",
+        "addressRegion": "MH",
+        "postalCode": "422003",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "17:30",
+          "closes": "21:00"
+        }
+      ],
+      "telephone": "+919272505632"
+    }
+    </script>
+
+    <link rel="stylesheet" href="fonts-local.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Custom layout overrides (not subject to Tailwind compilation) -->
+    <style>
+        /* Contact section: 3-column grid from xl (1280px) — tablets stay single column */
+        @media (min-width: 1280px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1.4fr 1fr;
+            }
+
+            /* Right-align the Direct column on desktop */
+            .contact-direct {
+                text-align: right;
+                align-items: flex-end;
+            }
+
+            /* Push the Direct header and WhatsApp button wrapper to the right */
+            .contact-direct .flex {
+                justify-content: flex-end;
+            }
+        }
+
+        /* Footer: 4-col proportional grid from md (768px) */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                gap: 3rem;
+            }
+        }
+
+        /* Floating WhatsApp button */
+        #wa-float {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 9999px;
+            background-color: #25D366;
+            box-shadow: 0 4px 24px rgba(37, 211, 102, 0.35);
+            transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+
+        #wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 32px rgba(37, 211, 102, 0.5);
+        }
+
+        #wa-float.hidden-float {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased bg-white text-gray-800">
+
+    <!-- Header Navigation -->
+    <header class="w-full sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-4 flex justify-between items-center">
+
+            <a href="#" class="flex items-center">
+                <img src="logo.png" alt="Dental Clinic Logo" width="947" height="233" class="h-10 w-auto">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" data-section="services"
+                    class="nav-link text-sm font-medium text-gray-900 hover:text-primary transition-colors">Services</a>
+                <a href="#about" data-section="about"
+                    class="nav-link text-sm font-medium text-gray-900 hover:text-primary transition-colors">About</a>
+                <a href="#gallery" data-section="gallery"
+                    class="nav-link text-sm font-medium text-gray-900 hover:text-primary transition-colors">Gallery</a>
+                <a href="#testimonials" data-section="testimonials"
+                    class="nav-link text-sm font-medium text-gray-900 hover:text-primary transition-colors">Testimonials</a>
+            </nav>
+
+            <div class="flex items-center space-x-5">
+
+                <a href="https://instagram.com/your-clinic-page" target="_blank" rel="noopener noreferrer"
+                    class="hidden sm:inline-flex text-gray-900 hover:text-primary transition-colors"
+                    aria-label="Follow us on Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+
+                <a href="tel:+919272505632"
+                    class="inline-flex bg-primary text-white text-sm font-medium px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity">
+                    Call Us
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-900 hover:text-primary focus:outline-none"
+                    aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[60] bg-[#fbfbfd] flex-col px-6 py-6 overflow-y-auto transition-opacity duration-300">
+
+        <div class="flex justify-end mb-8 shrink-0">
+            <button id="close-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none"
+                aria-label="Close Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 font-light" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="flex-1 flex flex-col justify-center space-y-8 pb-12">
+            <a href="#services"
+                class="mobile-link text-3xl font-heading font-semibold text-gray-900 hover:text-primary transition-colors">Services</a>
+            <a href="#about"
+                class="mobile-link text-3xl font-heading font-semibold text-gray-900 hover:text-primary transition-colors">About</a>
+            <a href="#gallery"
+                class="mobile-link text-3xl font-heading font-semibold text-gray-900 hover:text-primary transition-colors">Gallery</a>
+            <a href="#testimonials"
+                class="mobile-link text-3xl font-heading font-semibold text-gray-900 hover:text-primary transition-colors">Testimonials</a>
+            <a href="https://instagram.com/your-clinic-page" target="_blank" rel="noopener noreferrer"
+                class="mobile-link text-3xl font-heading font-semibold text-gray-900 hover:text-primary transition-colors"
+                aria-label="Follow us on Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-[1em] w-[1em]" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                </svg>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="overflow-hidden">
+        <!-- Hero Section -->
+        <section id="hero"
+            class="w-full bg-white pt-32 pb-24 md:pt-48 md:pb-32 px-6 md:px-12 lg:px-24 flex flex-col items-center justify-center text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xs md:text-sm font-sans text-gray-400 uppercase tracking-[0.2em] mb-4 md:mb-6">
+                    estd. 2026
+                </p>
+                <h1
+                    class="text-4xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                    Healthy Teeth.<br class="hidden md:block">
+                    <span class="text-primary">Beautiful Smiles.</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-500 font-sans max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Calm, modern dentistry — guided with clarity, delivered with precision, and designed to feel
+                    considered from the start.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+                    <a href="tel:+919272505632"
+                        class="w-full sm:w-auto bg-primary text-white text-lg font-medium px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity">
+                        Call Us Today
+                    </a>
+
+                    <a href="#services"
+                        class="w-full sm:w-auto border border-gray-300 text-gray-900 text-lg font-medium px-8 py-3.5 rounded-full hover:bg-gray-50 transition-colors">
+                        Explore Services
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!-- Statistics Section -->
+        <section id="stats" class="w-full bg-white py-16 lg:py-20 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <div class="relative w-full">
+                    <img src="clinic-photo.jpg" alt="Modern Dental Clinic Interior" width="1280" height="1280"
+                        loading="lazy"
+                        class="w-full aspect-square md:aspect-video lg:aspect-square object-cover rounded-3xl shadow-sm">
+                </div>
+
+                <div class="flex flex-col justify-center">
+
+                    <h2
+                        class="text-2xl md:text-5xl font-heading font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                        A Thoughtful Approach, <br class="hidden md:block">
+                        <span class="text-primary">Proven in Practice</span>
+                    </h2>
+
+                    <p class="text-lg text-gray-600 font-sans mb-12 leading-relaxed">
+                        From your first consultation to final results, every step is guided with clarity, precision, and
+                        a commitment to your comfort.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8 md:gap-12">
+
+                        <div>
+                            <p class="text-4xl md:text-5xl font-heading font-extrabold text-primary mb-2">4+</p>
+                            <p
+                                class="text-xs md:text-sm text-gray-500 font-sans font-semibold uppercase tracking-widest">
+                                Years Experience</p>
+                        </div>
+
+                        <div>
+                            <p class="text-4xl md:text-5xl font-heading font-extrabold text-primary mb-2">3k+</p>
+                            <p
+                                class="text-xs md:text-sm text-gray-500 font-sans font-semibold uppercase tracking-widest">
+                                Happy Patients</p>
+                        </div>
+
+                        <div>
+                            <p class="text-4xl md:text-5xl font-heading font-extrabold text-primary mb-2">4.7</p>
+                            <p
+                                class="text-xs md:text-sm text-gray-500 font-sans font-semibold uppercase tracking-widest">
+                                Average Rating</p>
+                        </div>
+
+                        <div>
+                            <p class="text-4xl md:text-5xl font-heading font-extrabold text-primary mb-2">0</p>
+                            <p
+                                class="text-xs md:text-sm text-gray-500 font-sans font-semibold uppercase tracking-widest">
+                                Rushed Appointments</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="w-full py-16 md:py-20 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto">
+
+                <div class="mb-12 md:mb-16">
+                    <h2
+                        class="text-4xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tighter mb-6 leading-[1.1]">
+                        A refined approach to <span class="text-primary font-light">every smile.</span>
+                    </h2>
+                    <p class="text-xl text-gray-500 font-sans max-w-xl leading-relaxed">
+                        A curated set of treatments, delivered with consistency, precision, and understated care.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
+
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Preventive care</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">Essential care for long-term oral
+                            health.</p>
+                    </div>
+
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Cosmetic dentistry</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">Subtle enhancements to refine your
+                            smile.</p>
+                    </div>
+
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Invisalign</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">Discreet orthodontic treatment for
+                            gradual alignment.</p>
+                    </div>
+
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Dental Implants</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">A precise solution for replacing
+                            missing teeth.</p>
+                    </div>
+
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Pediatric Care</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">Gentle, reassuring care for young
+                            patients.</p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-[2rem] transition-all duration-500 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-transparent hover:border-gray-100">
+                        <div class="text-primary mb-6 transition-transform duration-500 group-hover:-translate-y-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="1.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3
+                            class="text-2xl font-heading font-bold text-gray-900 mb-3 tracking-tight transition-colors duration-300 group-hover:text-primary">
+                            Smile Design</h3>
+                        <p class="text-gray-500 font-sans leading-relaxed text-base">A personalised approach to
+                            transforming your smile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About/Practitioner Section -->
+        <section id="about" class="w-full bg-white py-16 md:py-20 px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24 items-center">
+
+                <div class="relative group lg:col-span-2 w-full">
+                    <div
+                        class="aspect-[4/5] md:aspect-video lg:aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-sm transition-transform duration-700 group-hover:scale-[1.01]">
+                        <img src="doctor-portrait.jpg" alt="Dr. Name - Lead Dentist" width="640" height="640"
+                            loading="lazy" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/5 rounded-full -z-10"></div>
+                </div>
+
+                <div class="flex flex-col lg:col-span-3">
+                    <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6">Behind the Practice</p>
+
+                    <h2
+                        class="text-3xl md:text-5xl font-heading font-bold text-gray-900 tracking-tight mb-8 leading-tight">
+                        A More Personal Approach to <br>
+                        <span class="text-primary font-light">Care.</span>
+                    </h2>
+
+                    <div class="space-y-6 text-lg text-gray-600 font-sans leading-relaxed">
+                        <p>
+                            Smile Theory was created to redefine the dental experience — where precision meets calm, and
+                            care feels genuinely personal.
+                        </p>
+                        <p>
+                            With a refined, detail-oriented approach, every treatment is designed to create smiles that
+                            are not only healthy, but naturally elegant.
+                            Each plan is thoughtfully tailored to deliver results that are subtle, lasting, and uniquely
+                            individual.
+                        </p>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-100">
+                        <p class="text-gray-900 font-heading font-semibold italic text-xl">
+                            "Every Healthy Smile is Perfect Smile"
+                        </p>
+                        <p class="text-sm text-gray-900 mt-2 font-semibold font-sans">Dr. Tejal </p>
+                        <p class="text-sm text-gray-400 mt-2 font-sans">Lead Dentist & Founder</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Patient Journey Section -->
+        <section id="journey" class="w-full px-4 md:px-6 py-8 md:py-16">
+            <div class="max-w-7xl mx-auto bg-[#f4f7f6] py-16 md:py-20 px-8 md:px-16 rounded-[3.5rem]">
+
+                <div class="mb-12 md:mb-16">
+                    <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6">The Experience</p>
+                    <h2
+                        class="text-4xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tighter leading-[1.1]">
+                        Your first visit, <span class="text-primary font-light">Thoughtfully Designed.</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-8">
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-xs font-sans text-primary font-bold mb-4 uppercase tracking-widest">01</p>
+                        <h4 class="text-xl font-heading font-bold text-gray-900 mb-4">Arrival</h4>
+                        <p class="text-gray-600 font-sans text-sm leading-relaxed">Step into a calm, welcoming space
+                            designed to put you immediately at ease.</p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-xs font-sans text-primary font-bold mb-4 uppercase tracking-widest">02</p>
+                        <h4 class="text-xl font-heading font-bold text-gray-900 mb-4">Consultation</h4>
+                        <p class="text-gray-600 font-sans text-sm leading-relaxed">An unhurried conversation to
+                            understand your goals, concerns, and expectations.</p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-xs font-sans text-primary font-bold mb-4 uppercase tracking-widest">03</p>
+                        <h4 class="text-xl font-heading font-bold text-gray-900 mb-4">Examination</h4>
+                        <p class="text-gray-600 font-sans text-sm leading-relaxed">Advanced digital diagnostics to build
+                            a clear and accurate understanding of your smile.</p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-xs font-sans text-primary font-bold mb-4 uppercase tracking-widest">04</p>
+                        <h4 class="text-xl font-heading font-bold text-gray-900 mb-4">The Plan</h4>
+                        <p class="text-gray-600 font-sans text-sm leading-relaxed">A transparent, personalised treatment
+                            plan — explained with clarity and care.</p>
+                    </div>
+
+                    <div class="pt-8 border-t border-gray-200">
+                        <p class="text-xs font-sans text-primary font-bold mb-4 uppercase tracking-widest">05</p>
+                        <h4 class="text-xl font-heading font-bold text-gray-900 mb-4">Treatment</h4>
+                        <p class="text-gray-600 font-sans text-sm leading-relaxed">Precise, considered treatment
+                            delivered with comfort and attention to detail.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section id="gallery" class="w-full bg-white py-16 md:py-20 overflow-hidden">
+            <div
+                class="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <div>
+                    <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6">Smile Transformations</p>
+                    <h2
+                        class="text-4xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tighter leading-[1.1]">
+                        Carefully crafted outcomes, <span class="text-primary font-light">designed to feel
+                            natural.</span>
+                    </h2>
+                </div>
+            </div>
+
+            <div
+                class="flex overflow-x-auto gap-8 px-6 md:px-12 lg:px-24 pb-12 snap-x snap-mandatory hide-scrollbar max-w-7xl mx-auto">
+
+                <div class="min-w-[85vw] md:min-w-[600px] snap-center flex flex-col">
+                    <div
+                        class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 mb-6 select-none">
+                        <img src="before-1.jpg" alt="Before" width="800" height="600" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <div class="slider-after absolute inset-0 w-full h-full object-cover overflow-hidden"
+                            style="clip-path: inset(0 0 0 50%);">
+                            <img src="after-1.jpg" alt="After" width="800" height="600" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <input type="range" min="0" max="100" value="50"
+                            aria-label="Veneer Restoration before and after comparison slider"
+                            class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+                        <div
+                            class="slider-line absolute inset-y-0 left-1/2 w-[2px] bg-white/80 shadow-xl z-10 pointer-events-none">
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7 16l-4-4m0 0l4-4m-4 4h18m-4 4l4-4m0 0l-4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-gray-900 px-4">Veneer Restoration</h4>
+                </div>
+
+                <div class="min-w-[85vw] md:min-w-[600px] snap-center flex flex-col">
+                    <div
+                        class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 mb-6 select-none">
+                        <img src="before-2.jpg" alt="Before" width="800" height="600" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <div class="slider-after absolute inset-0 w-full h-full object-cover overflow-hidden"
+                            style="clip-path: inset(0 0 0 50%);">
+                            <img src="after-2.jpg" alt="After" width="800" height="600" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <input type="range" min="0" max="100" value="50"
+                            aria-label="Invisalign Journey before and after comparison slider"
+                            class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+                        <div
+                            class="slider-line absolute inset-y-0 left-1/2 w-[2px] bg-white/80 shadow-xl z-10 pointer-events-none">
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7 16l-4-4m0 0l4-4m-4 4h18m-4 4l4-4m0 0l-4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-gray-900 px-4">Invisalign Journey</h4>
+                </div>
+
+                <div class="min-w-[85vw] md:min-w-[600px] snap-center flex flex-col">
+                    <div
+                        class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 mb-6 select-none">
+                        <img src="before-3.jpg" alt="Before" width="800" height="600" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <div class="slider-after absolute inset-0 w-full h-full object-cover overflow-hidden"
+                            style="clip-path: inset(0 0 0 50%);">
+                            <img src="after-3.jpg" alt="After" width="800" height="600" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <input type="range" min="0" max="100" value="50"
+                            aria-label="Teeth Whitening before and after comparison slider"
+                            class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+                        <div
+                            class="slider-line absolute inset-y-0 left-1/2 w-[2px] bg-white/80 shadow-xl z-10 pointer-events-none">
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7 16l-4-4m0 0l4-4m-4 4h18m-4 4l4-4m0 0l-4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-gray-900 px-4">Teeth Whitening</h4>
+                </div>
+
+                <div class="min-w-[85vw] md:min-w-[600px] snap-center flex flex-col">
+                    <div
+                        class="relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-sm border border-gray-100 mb-6 select-none">
+                        <img src="before-4.jpg" alt="Before" width="800" height="600" loading="lazy"
+                            class="absolute inset-0 w-full h-full object-cover">
+                        <div class="slider-after absolute inset-0 w-full h-full object-cover overflow-hidden"
+                            style="clip-path: inset(0 0 0 50%);">
+                            <img src="after-4.jpg" alt="After" width="800" height="600" loading="lazy"
+                                class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <input type="range" min="0" max="100" value="50"
+                            aria-label="Dental Implants before and after comparison slider"
+                            class="slider-input absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20">
+                        <div
+                            class="slider-line absolute inset-y-0 left-1/2 w-[2px] bg-white/80 shadow-xl z-10 pointer-events-none">
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7 16l-4-4m0 0l4-4m-4 4h18m-4 4l4-4m0 0l-4-4" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-2xl font-heading font-bold text-gray-900 px-4">Dental Implants</h4>
+                </div>
+
+
+                <div class="min-w-[85vw] md:min-w-[600px] snap-center flex flex-col">
+                    <a href="https://instagram.com/your-clinic-page" target="_blank" rel="noopener noreferrer"
+                        class="flex flex-col items-center text-primary font-medium hover:text-primary transition-colors p-12 text-center w-full h-full justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-12 w-12 mb-4 group-hover:scale-110 transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                        </svg>
+                        <span class="text-2xl font-heading font-bold text-gray-900 mb-2">Want to see more?</span>
+                        <span class="text-gray-500 font-sans">Check out our Instagram page for more transformation
+                            photos.</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Testimonials & Reviews -->
+        <section id="testimonials" class="w-full py-16 md:py-20 px-6 md:px-12 lg:px-24 overflow-hidden">
+
+            <div class="max-w-7xl mx-auto mb-12 md:mb-16">
+                <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6 px-1">Testimonials</p>
+                <h2
+                    class="text-4xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tighter leading-[1.1]">
+                    In Their <span class="text-primary font-light">Words</span>
+                </h2>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto">
+                <div id="testimonial-slider"
+                    class="flex overflow-x-auto pb-6 snap-x snap-mandatory hide-scrollbar scroll-smooth">
+
+                    <!-- Review 1 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "Nothing was rushed. Dr. Tejal’s
+                                    <span class="text-primary italic font-light">attention to detail</span> and gentle
+                                    approach
+                                    immediately put me at ease."
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Sara
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "The whole experience felt very calm. The doctor explained everything clearly, and
+                                    the result looks very <span class="text-primary italic font-light">natural</span>."
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Sanket</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "I was a bit unsure at first, but it’s been a <span
+                                        class="text-primary italic font-light">smooth experience overall</span>. The
+                                    alignment is improving gradually, which is nice to see."
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Ananya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "A completely <span class="text-primary italic font-light">painless
+                                        experience.</span>"
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Aarya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "अनुभव खूप शांत आणि व्यवस्थित होता. डॉक्टरांनी सगळं नीट समजावलं, त्यामुळे खूप
+                                    <span class="text-primary italic font-light"> रिलॅक्स वाटलं.</span>"
+
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Maya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="w-full shrink-0 snap-center">
+                        <div class="relative px-4 md:px-12">
+                            <span
+                                class="absolute -top-16 -left-4 text-[120px] md:text-[160px] font-serif text-primary/5 select-none leading-none">“</span>
+                            <div class="relative z-10">
+                                <blockquote
+                                    class="text-2xl md:text-4xl font-heading font-medium text-gray-900 leading-[1.4] mb-8 tracking-tight">
+                                    "I brought my child here for treatment, and the whole experience was very smooth.
+                                    The doctor was very patient and made sure my <span
+                                        class="text-primary italic font-light">child felt comfortable.</span>"
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="h-px w-12 bg-primary"></div>
+                                    <p class="text-base md:text-lg font-sans font-semibold text-gray-900">Priya</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dots -->
+                <div class="flex justify-center gap-3 mt-4" id="testimonial-dots">
+                    <button class="w-2.5 h-2.5 rounded-full bg-primary transition-colors dot-btn" data-index="0"
+                        aria-label="Go to slide 1"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors dot-btn" data-index="1"
+                        aria-label="Go to slide 2"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors dot-btn" data-index="2"
+                        aria-label="Go to slide 3"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors dot-btn" data-index="3"
+                        aria-label="Go to slide 4"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors dot-btn" data-index="4"
+                        aria-label="Go to slide 5"></button>
+                    <button class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors dot-btn" data-index="5"
+                        aria-label="Go to slide 6"></button>
+                </div>
+            </div>
+
+            <!-- Ratings Stats -->
+            <div class="max-w-5xl mx-auto mt-12 md:mt-16 border-t border-gray-200 pt-8 md:pt-12">
+                <div class="grid grid-cols-3 gap-2 md:gap-12 text-center divide-x divide-gray-200">
+                    <div class="flex flex-col items-center justify-center py-2 md:py-4 px-1 md:px-0">
+                        <div class="flex items-center gap-0.5 md:gap-1 mb-2 md:mb-3 text-yellow-400">
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-xl md:text-4xl font-heading font-bold text-gray-900 mb-1 md:mb-2">4.9</p>
+                        <p
+                            class="text-[9px] md:text-sm font-sans text-gray-500 uppercase tracking-widest break-words w-full">
+                            Google Rating</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-2 md:py-4 px-1 md:px-0">
+                        <div class="flex items-center gap-0.5 md:gap-1 mb-2 md:mb-3 text-yellow-400">
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-xl md:text-4xl font-heading font-bold text-gray-900 mb-1 md:mb-2">5.0</p>
+                        <p
+                            class="text-[9px] md:text-sm font-sans text-gray-500 uppercase tracking-widest break-words w-full">
+                            Practo Rating</p>
+                    </div>
+                    <div class="flex flex-col items-center justify-center py-2 md:py-4 px-1 md:px-0">
+                        <div class="flex items-center gap-0.5 md:gap-1 mb-2 md:mb-3 text-yellow-400">
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-3 h-3 md:w-6 md:h-6 text-gray-200" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-xl md:text-4xl font-heading font-bold text-gray-900 mb-1 md:mb-2">4.8</p>
+                        <p
+                            class="text-[9px] md:text-sm font-sans text-gray-500 uppercase tracking-widest break-words w-full">
+                            Just Dial</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section id="faq" class="w-full bg-white py-16 md:py-24 px-6 md:px-12 lg:px-24">
+            <div
+                class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-12 lg:gap-24 items-start">
+
+                <div>
+                    <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6">FAQ
+                    </p>
+                    <h2
+                        class="text-4xl md:text-6xl font-heading font-extrabold text-gray-900 tracking-tighter leading-tight">
+                        What You May <span class="text-primary font-light">Want to Know</span>
+                    </h2>
+                </div>
+
+                <div>
+                    <div class="border-t border-gray-100">
+
+                        <div class="border-b border-gray-100 group">
+                            <button class="flex justify-between items-center w-full py-8 text-left outline-none"
+                                aria-expanded="false" aria-controls="faq-answer-1" onclick="toggleFAQ(this)">
+                                <span class="text-xl md:text-2xl font-heading font-bold text-gray-900 pr-8">Do you
+                                    accept
+                                    insurance?</span>
+                                <span class="text-2xl text-primary transition-all duration-300 icon">+</span>
+                            </button>
+                            <div id="faq-answer-1"
+                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out answer">
+                                <p class="pb-8 text-gray-600 font-sans leading-relaxed text-lg">
+                                    Yes, we work with most major PPO insurance providers. Our team handles the filing
+                                    process to ensure you maximize your benefits seamlessly.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-gray-100 group">
+                            <button class="flex justify-between items-center w-full py-8 text-left outline-none"
+                                aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFAQ(this)">
+                                <span class="text-xl md:text-2xl font-heading font-bold text-gray-900 pr-8">How long
+                                    does a
+                                    first visit take?</span>
+                                <span class="text-2xl text-primary transition-all duration-300 icon">+</span>
+                            </button>
+                            <div id="faq-answer-2"
+                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out answer">
+                                <p class="pb-8 text-gray-600 font-sans leading-relaxed text-lg">
+                                    We believe in unhurried care. Your first comprehensive visit typically lasts 60 to
+                                    75
+                                    minutes, allowing ample time for diagnostics and a one-on-one consult.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-gray-100 group">
+                            <button class="flex justify-between items-center w-full py-8 text-left outline-none"
+                                aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFAQ(this)">
+                                <span class="text-xl md:text-2xl font-heading font-bold text-gray-900 pr-8">What
+                                    technology
+                                    do you use?</span>
+                                <span class="text-2xl text-primary transition-all duration-300 icon">+</span>
+                            </button>
+                            <div id="faq-answer-3"
+                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out answer">
+                                <p class="pb-8 text-gray-600 font-sans leading-relaxed text-lg">
+                                    Our clinic is equipped with low-radiation digital x-rays, iTero 3D scanners for
+                                    mess-free impressions, and high-definition intraoral cameras.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-gray-100 group">
+                            <button class="flex justify-between items-center w-full py-8 text-left outline-none"
+                                aria-expanded="false" aria-controls="faq-answer-4" onclick="toggleFAQ(this)">
+                                <span class="text-xl md:text-2xl font-heading font-bold text-gray-900 pr-8">Do you offer
+                                    emergency appointments?</span>
+                                <span class="text-2xl text-primary transition-all duration-300 icon">+</span>
+                            </button>
+                            <div id="faq-answer-4"
+                                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out answer">
+                                <p class="pb-8 text-gray-600 font-sans leading-relaxed text-lg">
+                                    Absolutely. We reserve same-day slots for dental emergencies. If you are in pain,
+                                    call
+                                    us immediately and we will prioritize your care.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-12 text-left md:text-center lg:text-left">
+                        <p class="text-gray-500 font-sans">
+                            Still have questions? <br class="md:hidden">
+                            <a href="#contact"
+                                class="text-primary font-semibold hover:underline decoration-2 underline-offset-4">Connect
+                                with our team directly.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="w-full px-4 md:px-6 py-8 md:py-16">
+            <div
+                class="max-w-7xl mx-auto bg-[#f4f7f6] py-12 md:py-24 px-6 md:px-12 lg:px-24 rounded-[2rem] md:rounded-[3.5rem]">
+
+                <div class="mb-12 md:mb-16">
+                    <p class="text-xs font-sans text-gray-400 uppercase tracking-[0.2em] mb-6 px-1">Contact</p>
+                    <h2
+                        class="text-5xl md:text-7xl font-heading font-extrabold text-gray-900 tracking-tighter leading-[1.1]">
+                        Visit <span class="text-primary font-light">Smile Theory</span>
+                    </h2>
+                </div>
+
+                <div class="contact-grid grid grid-cols-1 gap-12 md:gap-8">
+
+                    <div class="flex flex-col">
+                        <div class="flex items-center h-8 mb-8">
+                            <h4 class="text-xs font-sans text-gray-400 uppercase tracking-widest">Location</h4>
+                        </div>
+                        <p class="text-2xl font-heading font-bold text-gray-900 mb-4 tracking-tight leading-snug">
+                            A9 Vraj landmark, Makhmalabaad road,<br>
+                            RTO office link road, behind Sharadchandra Pawar Market,
+                            Nashik, <br>Maharashtra 422003
+                        </p>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center gap-2 text-primary font-semibold hover:underline decoration-2 underline-offset-4 mt-2 w-max">
+                            Get Directions
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col items-start xl:items-center">
+                        <div class="flex items-center justify-start xl:justify-center gap-3 h-8 mb-8">
+                            <h4 class="text-xs font-sans text-gray-400 uppercase tracking-widest">Hours</h4>
+                            <span id="status-pill"
+                                class="hidden text-[9px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full"></span>
+                        </div>
+                        <ul class="space-y-5 font-sans text-lg lg:text-xl text-gray-500">
+                            <li id="hours-weekday"
+                                class="grid grid-cols-[110px_1fr] md:grid-cols-[120px_1fr] gap-4 border-b border-gray-50 pb-4 transition-colors duration-300 items-start">
+                                <span class="font-semibold">Mon — Sat</span>
+                                <div class="text-left tracking-tight">
+                                    <span class="italic block mb-1.5">10:00 AM — 2:00 PM</span>
+                                    <span class="italic block">5:30 PM — 9:00 PM</span>
+                                </div>
+                            </li>
+                            <li id="hours-sunday"
+                                class="grid grid-cols-[110px_1fr] md:grid-cols-[120px_1fr] gap-4 border-b border-gray-50 pb-4 transition-colors duration-300 items-start">
+                                <span class="font-semibold">Sunday</span>
+                                <span class="italic text-left tracking-tight">By appointment only</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-direct flex flex-col">
+                        <div class="flex items-center h-8 mb-8">
+                            <h4 class="text-xs font-sans text-gray-400 uppercase tracking-widest">Direct</h4>
+                        </div>
+                        <a href="tel:+919272505632"
+                            class="text-2xl font-heading font-bold text-gray-900 hover:text-primary transition-colors tracking-tight mb-5 leading-snug">
+                            +91 92725 05632
+                        </a>
+                        <a href="mailto:[EMAIL_ADDRESS]"
+                            class="text-2xl font-heading font-bold text-gray-900 hover:text-primary transition-colors tracking-tight leading-snug">
+                            [EMAIL_ADDRESS]
+                        </a>
+                        <div class="mt-5 flex w-full">
+                            <a href="https://wa.me/919272505632" rel="noopener noreferrer"
+                                class="inline-flex items-center gap-2.5 bg-primary text-white px-8 py-4 rounded-full font-heading font-bold text-sm tracking-wide hover:bg-gray-900 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                                <svg class="w-[18px] h-[18px]" fill="currentColor" viewBox="0 0 24 24"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                </svg>
+                                WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="w-full bg-primary text-white pt-10 md:pt-14 pb-6 md:pb-8 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="footer-grid grid grid-cols-1 gap-0 mb-4 md:mb-8">
+
+                <div>
+                    <a href="#" class="inline-block mb-4">
+                        <img src="logo.png" alt="Smile Theory Logo" width="947" height="233" loading="lazy"
+                            class="h-10 w-auto brightness-0 invert">
+                    </a>
+                    <p class="text-white/70 font-sans leading-relaxed max-w-sm text-base">
+                        A considered approach to dentistry — combining precision, calm, and personalised care.
+                    </p>
+                </div>
+
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="nav-list" onclick="toggleFooter('nav-list', this)">
+                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">
+                            Navigation</h5>
+                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="nav-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
+                        <li><a href="#about"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">About</a>
+                        </li>
+                        <li><a href="#services"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">
+                                Services</a></li>
+                        <li><a href="#gallery"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">Smile
+                                Gallery</a></li>
+                        <li><a href="#faq"
+                                class="text-white/70 hover:text-white transition-colors whitespace-nowrap">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="follow-list" onclick="toggleFooter('follow-list', this)">
+                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Follow
+                        </h5>
+                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <ul id="follow-list" class="hidden md:block space-y-3 font-sans text-sm pb-6 md:pb-0">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="border-b border-white/10 md:border-none">
+                    <button class="w-full flex justify-between items-center py-3 md:py-0 md:mb-5 text-left outline-none"
+                        aria-expanded="false" aria-controls="studio-list" onclick="toggleFooter('studio-list', this)">
+                        <h5 class="text-xs font-sans text-white/90 md:text-white/50 uppercase tracking-widest">Studio
+                        </h5>
+                        <svg class="h-4 w-4 text-white/50 md:hidden transition-transform duration-300" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="studio-list" class="hidden md:block pb-6 md:pb-0">
+                        <p class="text-sm text-white/70 leading-relaxed font-sans whitespace-nowrap">
+                            A9 Vraj landmark, Makhmalabaad road, <br>RTO office link road, <br>behind Sharadchandra
+                            Pawar Market,
+                            Nashik <br>Maharashtra 422003
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-4 md:pt-6 border-none md:border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 w-full">
+                    <div class="text-[11px] md:text-xs font-sans text-white/50">
+                        Copyright © 2026 Smile Theory. All rights reserved.
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-x-2 text-[11px] md:text-xs font-sans text-white/70">
+                        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="hidden md:flex h-10 w-10 shrink-0 rounded-full border border-white/20 items-center justify-center hover:bg-white hover:text-primary transition-all group">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 text-white/70 group-hover:text-primary transition-transform group-hover:-translate-y-0.5"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+    <div id="external-link-modal"
+        class="hidden fixed inset-0 z-[80] items-center justify-center bg-gray-950/50 px-6 backdrop-blur-sm"
+        role="dialog" aria-modal="true" aria-labelledby="external-link-title">
+        <div class="w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl">
+            <p id="external-link-title" class="text-xl font-heading font-bold text-gray-900 tracking-tight">
+                You are leaving Smile Theory
+            </p>
+            <p class="mt-3 text-sm leading-relaxed text-gray-500">
+                This link opens an external website or app. Please review that service's privacy practices before
+                sharing information.
+            </p>
+            <p id="external-link-host"
+                class="mt-4 break-all text-xs font-semibold uppercase tracking-widest text-primary">
+            </p>
+            <div class="mt-6 flex gap-3">
+                <button type="button" id="external-link-cancel"
+                    class="flex-1 rounded-full border border-gray-200 px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50">
+                    Stay here
+                </button>
+                <button type="button" id="external-link-continue"
+                    class="flex-1 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Footer Accordion Logic
+        function toggleFooter(sectionId, btn) {
+            if (window.innerWidth >= 768) return; // Only run on mobile
+            const section = document.getElementById(sectionId);
+            const icon = btn.querySelector('svg');
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            if (!isExpanded) {
+                section.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                section.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        const openBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Function to open menu
+        openBtn.addEventListener('click', () => {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+            document.body.style.overflow = 'hidden'; // Prevents scrolling on the background
+        });
+
+        // Function to close menu
+        const closeMenu = () => {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+            document.body.style.overflow = ''; // Restores background scrolling
+        };
+
+        // Close when clicking the 'X'
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Close when clicking any link inside the menu
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Logic for multiple sliders in a horizontal container
+        document.querySelectorAll('.slider-input').forEach(input => {
+            input.addEventListener('input', (e) => {
+                const container = e.target.parentElement;
+                const afterImg = container.querySelector('.slider-after');
+                const line = container.querySelector('.slider-line');
+                const value = e.target.value;
+
+                // Adjust the reveal
+                afterImg.style.clipPath = `inset(0 0 0 ${value}%)`;
+                // Move the line
+                line.style.left = `${value}%`;
+            });
+        });
+
+        // Testimonials Slider Logic
+        const testSlider = document.getElementById('testimonial-slider');
+        const dots = document.querySelectorAll('.dot-btn');
+
+        if (testSlider && dots.length > 0) {
+            // Update dots on scroll
+            testSlider.addEventListener('scroll', () => {
+                const scrollLeft = testSlider.scrollLeft;
+                const width = testSlider.clientWidth;
+                // Add a small threshold for smoother detection
+                const index = Math.round(scrollLeft / width);
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-primary');
+                    } else {
+                        dot.classList.remove('bg-primary');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            });
+
+            // Click dots to scroll
+            dots.forEach(dot => {
+                dot.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.getAttribute('data-index'));
+                    const width = testSlider.clientWidth;
+                    testSlider.scrollTo({
+                        left: index * width,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        }
+
+        // FAQ Toggle Logic
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.icon');
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+            if (isExpanded) {
+                answer.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+                button.setAttribute('aria-expanded', 'false');
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(45deg)';
+                button.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Hours and Status Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const clinicTimeString = now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
+            const clinicTime = new Date(clinicTimeString);
+
+            const dayOfWeek = clinicTime.getDay(); // 0 is Sunday, 1-6 is Mon-Sat
+            const hour = clinicTime.getHours();
+            const min = clinicTime.getMinutes();
+            const time = hour + min / 60; // fractional hours
+
+            let isOpen = false;
+            let nextOpenDay = '';
+            let nextOpenTime = '10:00 AM';
+
+            if (dayOfWeek >= 1 && dayOfWeek <= 6) {
+                // Mon - Sat
+                if (time >= 10 && time < 14) {
+                    isOpen = true;
+                } else if (time >= 17.5 && time < 21) { // 5:30 is 17.5
+                    isOpen = true;
+                } else {
+                    // It's closed
+                    if (time < 10) {
+                        nextOpenDay = 'Today';
+                        nextOpenTime = '10:00 AM';
+                    } else if (time >= 14 && time < 17.5) {
+                        nextOpenDay = 'Today';
+                        nextOpenTime = '5:30 PM';
+                    } else if (time >= 21) {
+                        nextOpenDay = dayOfWeek === 6 ? 'Monday' : 'Tomorrow';
+                        nextOpenTime = '10:00 AM';
+                    }
+                }
+            } else {
+                // Sunday
+                nextOpenDay = 'Monday';
+                nextOpenTime = '10:00 AM';
+            }
+
+            // Set Text Colors
+            const weekdayEl = document.getElementById('hours-weekday');
+            const sundayEl = document.getElementById('hours-sunday');
+
+            if (weekdayEl && sundayEl) {
+                if (dayOfWeek >= 1 && dayOfWeek <= 6) {
+                    weekdayEl.classList.remove('text-gray-500');
+                    weekdayEl.classList.add('text-gray-900');
+                } else {
+                    sundayEl.classList.remove('text-gray-500');
+                    sundayEl.classList.add('text-gray-900');
+                }
+            }
+
+            // Set Pill
+            const statusPill = document.getElementById('status-pill');
+            if (statusPill) {
+                statusPill.classList.remove('hidden');
+                if (isOpen) {
+                    statusPill.textContent = 'Open Now';
+                    statusPill.classList.add('bg-green-100', 'text-green-700');
+                } else {
+                    statusPill.textContent = 'Opens ' + nextOpenDay + ' ' + nextOpenTime;
+                    statusPill.classList.add('bg-gray-100', 'text-gray-600');
+                }
+            }
+        });
+
+        // --- Scroll-Spy: Highlight active nav link ---
+        (function () {
+            const navLinks = document.querySelectorAll('.nav-link[data-section]');
+            const sectionIds = Array.from(navLinks).map(l => l.dataset.section);
+            const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+            // Track intersection ratio for each section
+            const ratioMap = {};
+            sections.forEach(s => ratioMap[s.id] = 0);
+
+            function setActive(id) {
+                navLinks.forEach(link => {
+                    const isActive = link.dataset.section === id;
+                    link.classList.toggle('text-primary', isActive);
+                    link.classList.toggle('font-semibold', isActive);
+                    link.classList.toggle('text-gray-900', !isActive);
+                });
+            }
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    ratioMap[entry.target.id] = entry.intersectionRatio;
+                });
+                // Pick the section with the highest visible ratio
+                let best = null, bestRatio = 0;
+                sections.forEach(s => {
+                    if (ratioMap[s.id] > bestRatio) {
+                        bestRatio = ratioMap[s.id];
+                        best = s.id;
+                    }
+                });
+                if (best) setActive(best);
+            }, {
+                // Fire at every 10% step for smooth tracking
+                threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+                // Account for the sticky header height (~72px)
+                rootMargin: '-72px 0px 0px 0px'
+            });
+
+            sections.forEach(s => observer.observe(s));
+        })();
+
+        // --- Floating WhatsApp button: hide when contact or footer is visible ---
+        function initFloatingWhatsappButton() {
+            const waBtn = document.getElementById('wa-float');
+            const sectionsToHide = ['contact', 'footer'].map(id => document.getElementById(id)).filter(Boolean);
+            if (!waBtn || sectionsToHide.length === 0) return;
+
+            const visibilityMap = new Map();
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    visibilityMap.set(entry.target.id, entry.isIntersecting);
+                });
+
+                // Hide if ANY observed section is intersecting
+                const shouldHide = Array.from(visibilityMap.values()).some(isVisible => isVisible);
+
+                if (shouldHide) {
+                    waBtn.classList.add('hidden-float');
+                } else {
+                    waBtn.classList.remove('hidden-float');
+                }
+            }, { threshold: 0.01 });
+
+            sectionsToHide.forEach(section => observer.observe(section));
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initFloatingWhatsappButton);
+        } else {
+            initFloatingWhatsappButton();
+        }
+
+        // External Link Notice
+        (function () {
+            const modal = document.getElementById('external-link-modal');
+            const cancelBtn = document.getElementById('external-link-cancel');
+            const continueBtn = document.getElementById('external-link-continue');
+            const hostLabel = document.getElementById('external-link-host');
+            let pendingLink = null;
+
+            if (!modal || !cancelBtn || !continueBtn || !hostLabel) return;
+
+            function closeModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+                pendingLink = null;
+            }
+
+            document.addEventListener('click', (event) => {
+                const link = event.target.closest('a[href]');
+                if (!link) return;
+
+                const url = new URL(link.href, window.location.href);
+                const isExternal = ['http:', 'https:'].includes(url.protocol) && url.origin !== window.location.origin;
+                if (!isExternal || link.dataset.externalConfirmed === 'true') return;
+
+                event.preventDefault();
+                pendingLink = link;
+                hostLabel.textContent = url.hostname.replace(/^www\./, '');
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                continueBtn.focus();
+            });
+
+            cancelBtn.addEventListener('click', closeModal);
+
+            continueBtn.addEventListener('click', () => {
+                if (!pendingLink) return closeModal();
+                pendingLink.dataset.externalConfirmed = 'true';
+                const target = pendingLink.getAttribute('target');
+                if (target === '_blank') {
+                    window.open(pendingLink.href, '_blank', 'noopener,noreferrer');
+                } else {
+                    window.location.href = pendingLink.href;
+                }
+                closeModal();
+            });
+
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) closeModal();
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="wa-float" href="https://wa.me/919272505632" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+</body>
+
+</html>
