@@ -1000,6 +1000,10 @@ video {
   --tw-scroll-snap-strictness: mandatory;
 }
 
+.snap-start {
+  scroll-snap-align: start;
+}
+
 .snap-center {
   scroll-snap-align: center;
 }
